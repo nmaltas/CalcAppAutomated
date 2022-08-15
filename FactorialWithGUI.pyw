@@ -86,6 +86,6 @@ class Factorial:
 App=Tk()
 Mpougiournti= Factorial(App)
 App.configure( bg = "black")
-App.title('Testing SubRoutine')
+App.title('Factorial')
 App.geometry("250x200+500+200")
 App.mainloop()
