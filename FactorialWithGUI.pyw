@@ -37,7 +37,7 @@ class Factorial:
         global a
         a = 0
         Active = not Active
-        if (Active == True):
+        if (Active == True and (int(self.Number.get()) > 0)):
             try:
                 a = int(self.Number.get())
                 if (a < 0):
@@ -45,7 +45,7 @@ class Factorial:
                     return
             except:
                 return
-            
+                
             self.Number.config(state= "disabled", disabledbackground = "#FF6600")
             self.InputHere.config(fg = "#FF6600")
             DisabledText = "Calculating " + str(a) + "!"
@@ -61,7 +61,7 @@ class Factorial:
         
         while (True):
             
-            if ( (Active == True) and (a != 0) ):
+            if ( (Active == True) and (a > 0) ):
                 
                 Tzatziki = Application().start('Calc.exe ')
                 TzatzikiTzatziki = Desktop(backend = "uia").Calculator
